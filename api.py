@@ -31,6 +31,8 @@ def insertDetails():
     response = resDict.get("response")
     address = resDict.get("address") 
 
+    interactor.insertOne(ad, creationTime, desc, location, s_id, response, address)
+
     return jsonify({"value": "success"})
 
     
