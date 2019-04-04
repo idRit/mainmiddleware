@@ -14,10 +14,9 @@ def index():
     listOfDetails = []
     for detail in details_array:
         detail.pop('_id')
-        listOfDetails.append(detail)
+        listOfDetails.append(jsonify(detail))
 
-    return json.dumps(listOfDetails)
-
+    return listOfDetails
 
 @app.route("/api/insertDetails", methods = ['POST'])
 def insertDetails():
