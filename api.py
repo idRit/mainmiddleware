@@ -16,7 +16,7 @@ def index():
         detail.pop('_id')
         listOfDetails.append(jsonify(detail))
 
-    return listOfDetails
+    return json.dumps(listOfDetails)
 
 @app.route("/api/insertDetails", methods = ['POST'])
 def insertDetails():
