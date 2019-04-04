@@ -28,8 +28,8 @@ def insertDetails():
     desc = resDict.get("desc")
     location = resDict.get("location")
     s_id = resDict.get("s_id")
-    response = resDict("response")
-    address = resDict("address") 
+    response = resDict.get("response")
+    address = resDict.get("address") 
 
     error = interactor.insertOne(ad, creationTime, desc, location, s_id, response, address)
 
