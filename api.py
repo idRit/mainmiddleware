@@ -13,6 +13,7 @@ def index():
     details_array = interactor.getAll()
     listOfDetails = []
     for detail in details_array:
+        detail.pop('_id')
         listOfDetails.append(detail)
 
     return json.dumps(listOfDetails)
