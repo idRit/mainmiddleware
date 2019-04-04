@@ -13,9 +13,9 @@ def index():
     details_array = interactor.getAll()
     listOfDetails = []
     for detail in details_array:
-        listOfDetails.append(jsonify(detail))
+        listOfDetails.append(detail)
 
-    return listOfDetails
+    return json.dumps(listOfDetails)
 
 
 @app.route("/api/insertDetails", methods = ['POST'])
