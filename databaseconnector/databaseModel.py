@@ -21,7 +21,7 @@ class dbModel:
         self.mainCollection.insert(details)
 
     def getAll(self) :
-        cursor = self.mainCollection.find({})
+        cursor = self.mainCollection.find()
         return cursor
 
     def connected(self):
