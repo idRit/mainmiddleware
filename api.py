@@ -14,7 +14,7 @@ def index():
     listOfDetails = []
     for detail in details_array:
         detail.pop('_id')
-        listOfDetails.append(jsonify(detail))
+        listOfDetails.append(detail)
 
     return json.dumps(listOfDetails)
 
